@@ -20,7 +20,7 @@ connection.connect();
 
 // return;
 
-const url = 'https://www.olx.ro/imobiliare/apartamente-garsoniere-de-vanzare/baia-mare/?page=7';
+const url = 'https://www.olx.ro/imobiliare/apartamente-garsoniere-de-vanzare/baia-mare/?page=1';
 
 axios(url)
   .then(response => {
