@@ -1,0 +1,37 @@
+<main>
+  {{#if hasProducts }}
+
+  <table class="table table-sm">
+    <tr>
+      <th>ID</th>
+      <th></th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Date</th>
+    </tr>
+
+    {{#each prods}}
+    <tr>
+      <td>{{ this.olx_id }}</td>
+      <td>
+        {{#if this.olx_img_link }}
+        <img src="{{ this.olx_img_link }}" alt="" class="img-thumbnail" width="100px">
+        {{/if}}
+      </td>
+      <td>
+        <div>
+          <small>{{ this.category }}</small>
+        </div>
+        {{ this.title }}
+      </td>
+      <td>{{ this.price }}</td>
+      <td>{{ this.olx_created_at }}</td>
+    </tr>
+    {{/each}}
+
+  </table>
+
+  {{/if}}
+
+
+</main>
